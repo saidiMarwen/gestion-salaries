@@ -23,7 +23,6 @@ public class EmployeDTO {
 	 */
 	public EmployeDTO(Integer idEmploye, String prenom, String fonction, Integer anneeExperience, String adresse, Integer salaire,
 			Date dateNaissance) {
-		super();
 		this.idEmploye = idEmploye;
 		this.prenom = prenom;
 		this.fonction = fonction;
@@ -37,8 +36,7 @@ public class EmployeDTO {
 	 * 
 	 */
 	public EmployeDTO() {
-		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
 	/**

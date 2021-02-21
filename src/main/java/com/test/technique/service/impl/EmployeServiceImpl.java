@@ -2,8 +2,6 @@ package com.test.technique.service.impl;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -15,6 +13,7 @@ import com.test.technique.dto.EmployeDTO;
 import com.test.technique.mapper.EmployeMapper;
 import com.test.technique.model.Employe;
 import com.test.technique.service.EmployeService;
+
 
 @Service
 @Configuration
@@ -28,12 +27,10 @@ public class EmployeServiceImpl implements EmployeService {
 	EmployeRepository employeRepository;
 
 	@Override
-	public Stream<EmployeDTO> getAllEmploye() {
-
-		List<EmployeDTO> listEmploye = employeRepository.findAll().parallelStream().map(employeMapper::toDto)
-				.collect(Collectors.toList());
-
-		return listEmploye.parallelStream();
+	public List<EmployeDTO> getAllEmploye() {
+		
+		final List<Employe> employe = (List<Employe>) this.employeRepository.findAll();
+		return employeMapper.toDtoList(employe);
 	}
 
 	@Override

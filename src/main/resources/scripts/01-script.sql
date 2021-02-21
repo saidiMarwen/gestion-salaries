@@ -7,7 +7,7 @@ drop  SEQUENCE IF EXISTS employe_id_seq;
 /* Table: EMPLOYE                                         */
 /*==============================================================*/
 
-create table DOSSIER (
+create table EMPLOYE (
    ID_EMPLOYE             INTEGER             auto_increment 			NOT NULL,
    ADRESSE                CHARACTER varying(255)         NULL,	
    ANNEE_EXPERIENCE       INTEGER                  		NULL,
@@ -37,4 +37,3 @@ CREATE SEQUENCE EMPLOYE_ID_SEQ
 
 INSERT INTO employe(id_employe, adresse, annee_experience, date_naissance, fonction, prenom, salaire) VALUES (1,'PARIS',6,'1987-01-07','Consultant java jee','marwen',2500);
 INSERT INTO employe(id_employe, adresse, annee_experience, date_naissance, fonction, prenom, salaire) VALUES (2,'NANTES',4,'1989-01-07','TESTEUR','asma',2200);
-INSERT INTO employe(id_employe, adresse, annee_experience, date_naissance, fonction, prenom, salaire) VALUES (3,'LYON',1,'1993-01-07','Consultant dot net','dinah',2700);

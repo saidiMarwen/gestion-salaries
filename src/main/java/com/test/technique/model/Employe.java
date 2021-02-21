@@ -45,7 +45,6 @@ public class Employe implements Serializable {
 	private Date dateNaissance;
 
 	public Employe() {
-		super();
 	}
 
 	/**
@@ -59,7 +58,6 @@ public class Employe implements Serializable {
 	 */
 	public Employe(Integer idEmploye, String prenom, String fonction, Integer anneeExperience, String adresse, Integer salaire,
 			Date dateNaissance) {
-		super();
 		this.idEmploye = idEmploye;
 		this.prenom = prenom;
 		this.fonction = fonction;

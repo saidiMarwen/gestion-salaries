@@ -2,9 +2,6 @@ package com.test.technique.model;
 
 import static org.junit.Assert.assertEquals;
 
-import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -29,13 +26,6 @@ public class EmployeTest {
 	@Test
 	public void testRefMediationTest_Settters() throws Exception {
 
-//		String date = "1987-01-07";
-//		String date1 ="1989-01-07";
-//		
-//		SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-//		Date DATE_NAISSANCE = formatter.parse(date);
-//		Date DATE_NAISSANCE1 = formatter.parse(date1);
-
 		Employe employe = new Employe();
 		Employe employe1 = new Employe(ID_EMPLOYE1, PRENOM1, FONCTION1, ANNEE_EXPERIENCE1, ADRESSE1, SALAIRE1,
 				null);
@@ -46,7 +36,6 @@ public class EmployeTest {
 		employe.setFonction(FONCTION);
 		employe.setPrenom(PRENOM);
 		employe.setSalaire(SALAIRE);
-		//employe.setDateNaissance(DATE_NAISSANCE);
 
 		assertEquals(employe.getIdEmploye(), ID_EMPLOYE);
 		assertEquals(employe.getAdresse(), ADRESSE);
@@ -54,7 +43,6 @@ public class EmployeTest {
 		assertEquals(employe.getFonction(), FONCTION);
 		assertEquals(employe.getPrenom(), PRENOM);
 		assertEquals(employe.getSalaire(), SALAIRE);
-	//	assertEquals(employe.getDateNaissance(), DATE_NAISSANCE);
 
 		assertEquals(employe1.getIdEmploye(), ID_EMPLOYE1);
 		assertEquals(employe1.getAdresse(), ADRESSE1);

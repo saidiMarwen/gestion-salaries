@@ -1,6 +1,6 @@
 package com.test.technique.controller;
 
-import java.util.stream.Stream;
+import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 
@@ -19,7 +19,7 @@ public interface EmployeController {
 	
 	
 	@ApiOperation(value = "Récupérer toutes les Employees")
-	Stream<EmployeDTO> getAllEmploye();
+	List<EmployeDTO> getAllEmploye();
 
 	@ApiOperation(value = "Récupérer l'employe par Id")
 	ResponseEntity<EmployeDTO> getEmployeById(Integer idEmploye);

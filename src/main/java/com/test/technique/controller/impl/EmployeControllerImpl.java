@@ -1,7 +1,7 @@
 package com.test.technique.controller.impl;
 
 
-import java.util.stream.Stream;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -38,7 +38,7 @@ public class EmployeControllerImpl implements EmployeController {
 
 	@Override
 	@GetMapping(value = "/employees", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public Stream<EmployeDTO> getAllEmploye() {
+	public List<EmployeDTO> getAllEmploye() {
 		EmployeControllerImpl.LOGGER.info(LogMessages.EMPLOYEE_GETALL);
 		return this.employeService.getAllEmploye();
 	}

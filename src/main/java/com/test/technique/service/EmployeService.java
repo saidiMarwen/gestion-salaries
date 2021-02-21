@@ -1,6 +1,6 @@
 package com.test.technique.service;
 
-import java.util.stream.Stream;
+import java.util.List;
 
 import com.test.technique.dto.EmployeDTO;
 
@@ -10,7 +10,7 @@ public interface EmployeService {
 	 * 
 	 * @return List<EmployeDTO>
 	 */
-	public Stream<EmployeDTO> getAllEmploye();
+	public List<EmployeDTO> getAllEmploye();
 
 	/**
 	 * methode qui permet du recuperer un Employe par code
